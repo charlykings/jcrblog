@@ -1,28 +1,17 @@
-# specify language
 language:
-  - python
-
-# specify python version(s)
+- python
 python:
-  - "3.5"
-  - "3.4"
-  - "2.7"
-
-# install dependencies
+- '3.5'
+- '3.4'
+- '2.7'
 install:
-  - pip install -r requirements.txt
-
-# run tests
+- pip install -r requirements.txt
 script:
-  - nosetests
-
-# deploy
-#deploy:
-#  provider: heroku
-#  api_key:
-#    secure: XEtRjqqP6ZgiZKDi/OjSyMhJIPVPUzmX+5899LXfm2eyMtItYqFouCtBAOmBU5bWnZiwgXdB9l9ra2yiC+321TET1WVJe1WHDTFW1rzIpWS7t/ZIJYPhmwcYxa02kzLQZsrDZH/BW/cUuoHlOhmGSpuqO6SO1h1XnzwqHVe68vw=
-#  app: flasktaskr
-#  on:
-#    branch: master
-#    python: '3.5'
-#    repo: charlykings/jcrblog
+- nosetests
+deploy:
+  provider: heroku
+  api_key:
+    secure: TWiUYCOYum2mtB/g17Dy7f1eKBAS7Im3LYf0Vj8WrKatcDhy0xbmgfx6OIp4lcx8TygtWmrZddK92VBwGvbWCWzDHkddMqevH8A+v0s9Fsrmej1LohouSc0liir2myN/1iTyShWaNYmUKMeCkDSGfEAr8cpgLdnroY8K30EvFywfeeg+tR3nxEJ1ABavuKCMd7xWJRlfTQsERrsm+8Mr9aFkHWXB5icztEWEkFU12TDeEfIkzkYYyrh9wS32A3ChjFl8+/5sAxVsiSuLdzhdHL4UDLmXwUEpwHwVDEbQIeQcbC3mSU/U8NyWem7N8nklV4/3G6TD0i4hoaZEwermJXQTtkH9Bx3YSRiez8tb/GaDpHR1q5uw0d/guELuHNTw6BxZ6PSuIrcGBjH56tKrGYZ5t5U1laWyaj2MzwJpYjbwucShwSJHcR8ARJqpjyddAleosBeSqABVNP8KeWHiDaeBlZMxJEEXdXM5ik2myRYczICkPe+7tAat3S5ulS1mtu1Z8tmmSnvuHZDaiC9DNIWapabe4iaxUC9waDmHFq2cke1e2sP0vyV+hdfSNoQV/FO8mCrSTH/L4UyFKKYBxbIqoYtHlPH+sZP69iuqz7Snz7Ci0cLn6FQkul/r9fQ9csWO4WwJwjHSJUv/ZF1R2a5y4HHjd1GB5MHF43CTAzM=
+  app: jcrblog
+  on:
+    repo: charlykings/jcrblog
